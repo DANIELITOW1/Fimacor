@@ -1,0 +1,2 @@
+# Fimacor
+el proyecto fimacor
