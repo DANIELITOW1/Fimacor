@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIMACOR | Ficha de Máquina</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    .maquina-container {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      width: 480px;
+      padding: 40px 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    h2 {
+      color: #2E7D32;
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      color: #2E7D32;
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #E0F2F1;
+      border-radius: 10px;
+      font-size: 15px;
+      background: #FAFAFA;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus {
+      border-color: #1B5E20;
+      box-shadow: 0 0 6px rgba(30,120,60,0.12);
+      background: #fff;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .btn {
+      width: 100%;
+      background: #2E7D32;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+      margin-top: 6px;
+    }
+
+    .btn:hover {
+      background: #1B5E20;
+    }
+
+    .extra-options {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .extra-options a {
+      color: #2E7D32;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .extra-options a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    @media (max-width: 480px) {
+      .maquina-container {
+        width: 92%;
+        padding: 30px 18px;
+        margin: 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="maquina-container">
+    <div class="logo">
+      <img src="imagenes/sena.png" alt="Logo SENA">
+    </div>
+
+    <h2>Registro de Máquina</h2>
+
+    <form action="#" method="post" aria-label="Formulario de registro de máquina">
+
+      <div class="input-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Describa la máquina o equipo" required></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="tipo">Tipo de máquina</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Seleccione un tipo...</option>
+          <option value="Industrial">Industrial</option>
+          <option value="plana">plana</option>
+          <option value="filetiadora">filetiadora</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="marca">Marca</label>
+        <input type="text" id="marca" name="marca" placeholder="Ejemplo: Singer, Siruba..." required>
+      </div>
+
+      <div class="input-group">
+        <label for="modelo">Modelo</label>
+        <input type="text" id="modelo" name="modelo" placeholder="Ingrese el modelo del equipo" required>
+      </div>
+
+      <div class="input-group">
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required>
+          <option value="">Seleccione...</option>
+          <option value="Operativa">Operativa</option>
+          <option value="En Mantenimiento">En Mantenimiento</option>
+          <option value="Dañada">Dañada</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="ambiente">Ambiente de aprendizaje</label>
+        <input type="text" id="ambiente" name="ambiente" placeholder="Ejemplo: aula 219..." required>
+      </div>
+
+      <div class="input-group">
+        <label for="ubicacion">Ubicación física</label>
+        <input type="text" id="ubicacion" name="ubicacion" placeholder="Ejemplo:CMTC ..." required>
+      </div>
+
+      <button type="submit" class="btn">Registrar Máquina</button>
+
+      <div class="extra-options">
+        <p><a href="Maquinas rejistradas.html">Ver lista de máquinas registradas</a></p>
+      </div>
+    </form>
+
+    <footer>© 2025 FIMACOR - Sistema de Control de Máquinas Textiles</footer>
+  </div>
+</body>
+</html>

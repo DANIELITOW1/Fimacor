@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIMACOR | Historial de Mantenimientos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .historial-container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      width: 95%;
+      max-width: 1100px;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .header h2 {
+      color: #2E7D32;
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    .logo img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 15px;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      border: 2px solid #2E7D32;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 250px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .search-bar input:focus {
+      border-color: #1B5E20;
+      box-shadow: 0 0 5px rgba(46,125,50,0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2E7D32;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e8f5e9;
+    }
+
+    .tipo {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .preventivo { background-color: #43A047; }
+    .correctivo { background-color: #FFB300; }
+    .predictivo { background-color: #1E88E5; }
+
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-detalle {
+      background-color: #2E7D32;
+      color: white;
+    }
+
+    .btn-detalle:hover {
+      background-color: #1B5E20;
+    }
+
+    .btn-nuevo {
+      background-color: #2E7D32;
+      color: white;
+      font-size: 15px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .btn-nuevo:hover {
+      background-color: #1B5E20;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="historial-container">
+    <div class="header">
+      <h2>Historial de Mantenimientos</h2>
+      <div class="logo">
+        <img src="imagenes/sena.png" alt="Logo SENA">
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="🔍 Buscar por máquina o técnico...">
+    </div>
+
+    <a href="Mantenimientos preventivos.html" class="btn-nuevo">+ Registrar mantenimiento</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Máquina</th>
+          <th>Tipo</th>
+          <th>Fecha Inicio</th>
+          <th>Fecha Fin</th>
+          <th>Técnico</th>
+          <th>Observaciones</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Plana Juki DDL-8700</td>
+          <td><span class="tipo preventivo">Preventivo</span></td>
+          <td>2025-01-12</td>
+          <td>2025-01-13</td>
+          <td>Maria Del Pilar</td>
+          <td>Limpieza y ajuste de tensión</td>
+          <td><button class="btn btn-detalle">Ver</button></td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Fileteadora Brother CV3550</td>
+          <td><span class="tipo correctivo">Correctivo</span></td>
+          <td>2025-02-08</td>
+          <td>2025-02-09</td>
+          <td>Yilder Rodríguez</td>
+          <td>Cambio de motor y ajuste de poleas</td>
+          <td><button class="btn btn-detalle">Ver</button></td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Bordadora Janome MC500E</td>
+          <td><span class="tipo predictivo">Predictivo</span></td>
+          <td>2025-03-20</td>
+          <td>2025-03-20</td>
+          <td>Daniel Ospino</td>
+          <td>Verificación de vibración y calibración</td>
+          <td><button class="btn btn-detalle">Ver</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>© 2025 FIMACOR - Sistema de Control de Máquinas Textiles</footer>
+  </div>
+</body>
+</html>
