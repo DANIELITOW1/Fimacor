@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIMACOR | Manuales de Máquinas Textiles</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 600px;
+      padding: 35px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    h2 {
+      color: #2E7D32;
+      font-size: 1.7em;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      color: #2E7D32;
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #E0F2F1;
+      border-radius: 10px;
+      font-size: 15px;
+      background: #FAFAFA;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus {
+      border-color: #1B5E20;
+      box-shadow: 0 0 6px rgba(30,120,60,0.12);
+      background: #fff;
+    }
+
+    input[type="file"] {
+      background-color: #ffffff;
+      border: 2px dashed #81C784;
+      cursor: pointer;
+    }
+
+    input[type="file"]:hover {
+      background-color: #F1F8E9;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .btn {
+      width: 100%;
+      background: #2E7D32;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+      margin-top: 6px;
+    }
+
+    .btn:hover {
+      background: #1B5E20;
+    }
+
+    .extra-options {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .extra-options a {
+      color: #2E7D32;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .extra-options a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        width: 92%;
+        padding: 25px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="logo">
+      <img src="imagenes/sena.png" alt="Logo SENA">
+    </div>
+
+    <h2>Subida de Manuales Técnicos</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data" aria-label="Formulario de carga de manuales técnicos">
+
+      <div class="input-group">
+        <label for="maquina">Máquina asociada</label>
+        <select id="maquina" name="maquina" required>
+          <option value="">Seleccione una máquina...</option>
+          <option value="1">Plana Juki DDL-8700</option>
+          <option value="2">Fileteadora Brother CV3550</option>
+          <option value="3">Bordadora Janome MC500E</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="tipo_manual">Tipo de manual</label>
+        <select id="tipo_manual" name="tipo_manual" required>
+          <option value="">Seleccione...</option>
+          <option value="uso">Uso / Operación</option>
+          <option value="mantenimiento">Mantenimiento</option>
+          <option value="instalacion">Instalación</option>
+          <option value="seguridad">Seguridad</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="descripcion">Descripción del manual</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Ejemplo: Manual de mantenimiento preventivo de la máquina plana Juki"></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="archivo">Archivo del manual (PDF, DOCX, JPG)</label>
+        <input type="file" id="archivo" name="archivo" accept=".pdf, .doc, .docx, .jpg, .jpeg, .png" required>
+      </div>
+
+      <div class="input-group">
+        <label for="fecha_subida">Fecha de subida</label>
+        <input type="date" id="fecha_subida" name="fecha_subida" required>
+      </div>
+
+      
+
+      <button type="submit" class="btn">Subir Manual</button>
+
+      <div class="extra-options">
+        <p><a href="lista_maquinas.html">Volver a lista de máquinas</a></p>
+      </div>
+    </form>
+
+    <footer>© 2025 FIMACOR - Sistema de Control de Máquinas Textiles</footer>
+  </div>
+</body>
+</html>

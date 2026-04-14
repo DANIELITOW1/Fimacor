@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIMACOR | Gestión de Usuarios</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .usuarios-container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      width: 95%;
+      max-width: 1000px;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .header h2 {
+      color: #2E7D32;
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    .logo img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2E7D32;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e8f5e9;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-editar {
+      background-color: #43A047;
+      color: white;
+    }
+
+    .btn-editar:hover {
+      background-color: #2E7D32;
+    }
+
+    .btn-eliminar {
+      background-color: #E53935;
+      color: white;
+    }
+
+    .btn-eliminar:hover {
+      background-color: #B71C1C;
+    }
+
+    .btn-agregar {
+      background-color: #2E7D32;
+      color: white;
+      font-size: 15px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .btn-agregar:hover {
+      background-color: #1B5E20;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+
+      .btn {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="usuarios-container">
+    <div class="header">
+      <h2>Gestión de Usuarios</h2>
+      <div class="logo">
+        <img src="imagenes/sena.png" alt="Logo SENA - FIMACOR">
+      </div>
+    </div>
+
+    <a href="registro.html" class="btn-agregar">+ Agregar nuevo usuario</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Rol</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>cristian</td>
+          <td>rojas</td>
+          <td>cristian.rojas@sena.edu.co</td>
+          <td>3124709327</td>
+          <td>Administrador</td>
+          <td>
+            <button class="btn btn-editar">Editar</button>
+            <button class="btn btn-eliminar">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>yilder</td>
+          <td>Rodriguez</td>
+          <td>yilder.rodriguez@sena.edu.co</td>
+          <td>3153966822</td>
+          <td>Usuario</td>
+          <td>
+            <button class="btn btn-editar">Editar</button>
+            <button class="btn btn-eliminar">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>daniel</td>
+          <td>ospino</td>
+          <td>daniel.ospino@sena.edu.co</td>
+          <td>3009876543</td>
+          <td>Usuario</td>
+          <td>
+            <button class="btn btn-editar">Editar</button>
+            <button class="btn btn-eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>© 2025 FIMACOR - Sistema de Control de Máquinas Textiles</footer>
+  </div>
+</body>
+</html>
